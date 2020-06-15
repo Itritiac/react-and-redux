@@ -1,3 +1,39 @@
-.descriptionBlock {
-    padding: 10px;
+
+
+.contentImage{
+
+  position: relative;
+  overflow:hidden;
+  width:100%;
+  height:200px;
+}
+
+.contentImage img {
+ position: absolute;
+ top:50%;
+ left:50%;
+ -webkit-transform:translate(-50%,-50%);
+     -ms-transform:translate(-50%,-50%);
+         transform:translate(-50%,-50%);
+ width:100%;
+ height:200px;
+ -o-object-fit:cover;
+    object-fit:cover;
+}
+
+.content__avatarImage{
+ padding: 10px;
+ padding-left: 0px;
+ width: 100px;
+ height: 100px;
+}
+
+.content__avatarImage img{
+ width: 100px;
+ height: 100px;
+}
+
+.content__avatar{
+ display: flex;
+ align-items: center;
 }

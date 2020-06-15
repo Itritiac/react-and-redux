@@ -2,13 +2,16 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
-
-.dialogsItems {
+.dialogsItems{
+padding:  10px 0;
+}
+.dialogsItems  a{
     padding: 10px;
-    color: white;
+    color: #000;
+    text-decoration: none;
 }
 
-.dialogsItems .active {
+.dialogsItems a .active {
     color: gold;
 }
 

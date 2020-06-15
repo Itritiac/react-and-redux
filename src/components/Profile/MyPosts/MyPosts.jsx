@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './MyPosts.module.css';
+import styles from './MyPosts.module.css';
 import Post from './Post/Post';
 import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profile-reducer";
 
@@ -25,18 +25,21 @@ const MyPosts = (props) => {
     }
 
     return (
-        <div className={s.postsBlock}>
+        <div className={styles.postsBlock}>
             <h3>My posts</h3>
-            <div>
-                <div>
-                    <textarea onChange={ onPostChange } ref={newPostElement}
-                              value={props.newPostText} />
-                </div>
-                <div>
-                    <button onClick={ addPost }>Add post</button>
-                </div>
-            </div>
-            <div className={s.posts}>
+            <div className={styles.contactForm}>
+					<div className={styles.formName}>
+						<input type="text" className={styles.name} name="fname" placeholder="Your Name" /><br />
+						<input type="email" className={styles.name} name="fname" placeholder="Your Surname" /><br />
+					</div>
+
+					<div>
+						<textarea onChange={onPostChange} className={styles.FormText} rows="4" ref={newPostElement} cols="50" name="comment" form={"usrform"} value={props.newPostText} placeholder="Your Post"/>
+					</div>
+					<button onClick={addPost} className={styles.formButton}>Send message</button>
+
+				</div>
+            <div className={styles.posts}>
                 { postsElements }
             </div>
         </div>
