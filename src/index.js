@@ -7,22 +7,13 @@ import './index.css';
 import store from "./redux/redux-store";
 import * as serviceWorker from './serviceWorker';
 
-let rerenderEntireTree = (state) => {
+
     ReactDOM.render(
         <BrowserRouter>
             <Provider store = {store}>
                 <App/>
             </Provider>
         </BrowserRouter>, document.getElementById('root'));
-}
-
-rerenderEntireTree();
-
-store.subscribe(() =>{
-    let state = store.getState();
-    rerenderEntireTree(state);
-
-});
 
 
 // API
