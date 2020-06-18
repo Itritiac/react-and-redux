@@ -53,6 +53,18 @@
   right: 0;
   left: 0;
 }
+.pagination{
+  text-align: center;
+}
+
+.selectedPage{
+  font-weight: bold;
+}
+
+span{
+    cursor: pointer;
+    padding: 0 5px;
+}
 
 
 
