@@ -18,6 +18,7 @@
  background: #fff;
  margin: 20px 0;
  text-align: center;
+ position: relative;
 }
 
 .userImage{
@@ -31,12 +32,14 @@
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  width:100%;
+  width:274px;
   height:300px;
+  margin-bottom: 20px;
   object-fit:cover;
 }
 
 .userName{
+  padding-top: 25px;
   font-weight: bold;
 }
 
@@ -44,6 +47,12 @@
   font-weight: lighter;
 }
 
+.button{
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  left: 0;
+}
 
 
 
