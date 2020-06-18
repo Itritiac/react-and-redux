@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Users.module.css'
 import userPhoto from './../../assets/images/userPhoto.png'
+import preloader from './../../assets/images/infinity.svg';
 
 const Users = (props) => {
     let pagesCount = Math.ceil (props.totalUsersCount / props.pageSize);
@@ -13,6 +14,7 @@ const Users = (props) => {
     return (
         <div>
               <div className={styles.users}>
+              {props.isFetching ? <img className={styles.preloader} src={preloader}/>: null}
                   {
                     props.users.map( u =>
                       <div className={styles.userContainer} key={u.id}>
