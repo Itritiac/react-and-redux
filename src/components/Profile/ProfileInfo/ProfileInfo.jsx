@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './ProfileInfo.module.css';
 import Preloader from '../../common/Preloader/Preloader';
+import userPhoto from './../../../assets/images/userPhoto.png'
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -18,12 +19,14 @@ const ProfileInfo = (props) => {
       <div className={styles.content__avatar}>
 
         <div className={styles.content__avatarImage}>
-          <img src={props.profile.photos.large}/>
+          <img src={props.profile.photos.large ? props.profile.photos.large
+                                               : userPhoto}/>
         </div>
         <div>
-          <div><strong>Username: </strong>Itritiac</div>
-          <div><strong>Email: </strong>itritiac@gmail.com</div>
-          <div><strong>Phone: </strong> +(373) 69 12 34 56</div>
+          <div><strong>Username: </strong>{props.profile.fullName}</div>
+          <div><strong>Status: </strong>{props.profile.aboutMe}</div>
+          <div><strong>GitHub: </strong>{props.profile.contacts.github ? props.profile.contacts.github
+                                                                       : 'I dont have github'}</div>
         </div>
       </div>
       </div>
