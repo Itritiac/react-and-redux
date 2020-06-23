@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './ProfileInfo.module.css';
 import Preloader from '../../common/Preloader/Preloader';
 import userPhoto from './../../../assets/images/userPhoto.png'
+import ProfileStatus from './ProfileStatus';
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -24,10 +25,12 @@ const ProfileInfo = (props) => {
         </div>
         <div>
           <div><strong>Username: </strong>{props.profile.fullName}</div>
-          <div><strong>Status: </strong>{props.profile.aboutMe}</div>
+          <div><strong>About Me: </strong>{props.profile.aboutMe}</div>
+          <ProfileStatus status={"Hello my friends"}/>
           <div><strong>GitHub: </strong>{props.profile.contacts.github ? props.profile.contacts.github
-                                                                       : 'I dont have github'}</div>
+                                                                    : 'I dont have github'}</div>
         </div>
+
       </div>
       </div>
 )
