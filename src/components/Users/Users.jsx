@@ -4,6 +4,7 @@ import preloader from './../../assets/images/infinity.svg';
 import userPhoto from './../../assets/images/userPhoto.png';
 import styles from './Users.module.css';
 import * as axios from 'axios';
+import { userAPI } from '../api/api';
 
 const Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -32,42 +33,13 @@ const Users = (props) => {
                           <div className={styles.userLocation}>{"this will be indicated location"/*"u.location.country},{u.location.city"*/}</div>
                           <div className={styles.button}>
                             { u.followed
-                                ?<button disabled={props.followingInProgress.some ( id => id === u.id)}
-                                 onClick={ () => {
-                                  props.toggleFollowingProgress(true, u.id);
-                                  axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {
-                                    withCredentials: true,
-                                    headers: {
-                                      "API-KEY" : "77ab2db8-601f-459a-b48d-78248b31ac9d"
-                                    }
-                                  })
-                                  .then(response => {
-                                     if (response.data.resultCode == 0){
-                                      props.unfollow(u.id);
-                                      
-                                     }
-                                     props.toggleFollowingProgress(false, u.id);
-                                  });
-
-                                  
-                                
-                                } }>Unfollow</button>
-                                :<button disabled={props.followingInProgress.some ( id => id === u.id)} onClick={ () => {
-                                  props.toggleFollowingProgress(true, u.id);
-                                  axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,{},{
-                                    withCredentials: true,
-                                    headers: {
-                                      "API-KEY" : "77ab2db8-601f-459a-b48d-78248b31ac9d"
-                                    }
-                                  })
-                                  .then(response => {
-                                     if (response.data.resultCode == 0){
-                                      props.follow(u.id);
-                                     }
-                                     props.toggleFollowingProgress(false, u.id);
-                                  });
-                                
-                                } }>Follow</button>
+                                ? <button disabled={props.followingInProgress
+                                  .some(id => id === u.id)}
+                                        onClick={() => { props.unfollow(u.id) }}>
+                                  Unfollow</button>
+                              : <button disabled={props.followingInProgress.some(id => id === u.id)}
+                                        onClick={() => { props.follow(u.id) }}>
+                                        Follow</button>
                             }
                           </div>
                         </div>
