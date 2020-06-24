@@ -1,4 +1,6 @@
-import { userAPI } from "../components/api/api";
+import { userAPI } from "../api/api";
+
+
 
 
 const FOLLOW = 'FOLLOW';
