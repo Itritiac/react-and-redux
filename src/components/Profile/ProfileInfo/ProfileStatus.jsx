@@ -27,12 +27,20 @@ class ProfileStatus extends React.Component {
         });
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.status !== this.props.status){
+            this.setState({
+                status: this.props.status
+            })
+        }
+    }
+
     render() {
         return (
             <div>
                 {!this.state.editMode &&
                     <div onClick={ this.activateEditMode }>
-                        <strong>Status: </strong>{this.props.status || "-------"}
+                        <strong>Status: </strong>{this.props.status || "My status is empty"}
                     </div>
                 }
                 {this.state.editMode &&
