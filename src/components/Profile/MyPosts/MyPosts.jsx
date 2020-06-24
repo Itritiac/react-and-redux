@@ -1,41 +1,45 @@
 import React from 'react';
-import styles from './MyPosts.module.css';
+import s from './MyPosts.module.css';
 import Post from './Post/Post';
+import {Field, reduxForm} from "redux-form";
+
+let AddNewPostForm = (props) => {
+    return <form onSubmit={props.handleSubmit}>
+        <div className={s.formName}>
+            <Field component="input" className={s.name} name="firstName" placeholder="Your Name" /><br />
+            <Field component="input" className={s.name} name="Surname" placeholder="Your Surname" /><br />         </div>
+        <div>
+            <Field name="newPostText" className={s.FormText} component="textarea" />
+        </div>
+        <div>
+            <button>Add post</button>
+        </div>
+    </form>;
+}
+
+let AddNewPostFormRedux = reduxForm({form: "ProfileAddNewPostForm"})(AddNewPostForm);
 
 const MyPosts = (props) => {
-    let postsElements = props.posts.map( p => <Post message={p.message} likesCount={p.likesCount}/>);
+    let postsElements =
+        props.posts.map( p => <Post message={p.message} likesCount={p.likesCount}/>);
 
     let newPostElement = React.createRef();
 
-    let onAddPost = () => {
-        props.addPost();
-    }
-
-    let onPostChange = () => {
-        let text = newPostElement.current.value;
-        props.updateNewPostText(text);
+    let onAddPost = (values) => {
+        props.addPost(values.newPostText);
     }
 
     return (
-        <div className={styles.postsBlock}>
+        <div className={s.postsBlock}>
             <h3>My posts</h3>
-            <div className={styles.contactForm}>
-					<div className={styles.formName}>
-						<input type="text" className={styles.name} name="fname" placeholder="Your Name" /><br />
-						<input type="email" className={styles.name} name="fname" placeholder="Your Surname" /><br />
-					</div>
-
-					<div>
-						<textarea onChange={onPostChange} className={styles.FormText} rows="4" ref={newPostElement} cols="50" name="comment" form={"usrform"} value={props.newPostText} placeholder="Your Post"/>
-					</div>
-					<button onClick={onAddPost} className={styles.formButton}>Send message</button>
-
-				</div>
-            <div className={styles.posts}>
-                { postsElements }
+            <AddNewPostFormRedux onSubmit={onAddPost} />
+            <div className={s.posts}>
+            {postsElements}
             </div>
         </div>
     )
 }
 
-export default MyPosts;
+
+
+export default MyPosts; 
