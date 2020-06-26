@@ -29,7 +29,7 @@ class MyPosts extends React.PureComponent {
 
     render(){
         let postsElements =
-            this.props.posts.map( p => <Post message={p.message} likesCount={p.likesCount}/>);
+            [...this.props.posts].reverse().map( p => <Post message={p.message} likesCount={p.likesCount}/>);
 
         let newPostElement = React.createRef();
 

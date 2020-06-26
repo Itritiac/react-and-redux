@@ -19,7 +19,7 @@ export const getIsFetching = (state) => {
 }
 
 export const getFollowingInProgress = (state) => {
-    return state.usersPage.isFetching;
+    return state.usersPage.followingInProgress;
 }
 
 
