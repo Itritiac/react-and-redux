@@ -12,6 +12,11 @@ const ProfileInfo = (props) => {
         </div>
       )
   }
+  const onMainPhotoSelected = (e) => {
+    if (e.target.files.length) {
+        props.savePhoto(e.target.files[0]);
+    }
+}
   return (
     <div>
     <div className = {styles.contentImage}>
@@ -22,6 +27,7 @@ const ProfileInfo = (props) => {
         <div className={styles.content__avatarImage}>
           <img src={props.profile.photos.large ? props.profile.photos.large
                                                : userPhoto}/>
+          { props.isOwner && <input type={"file"} onChange={onMainPhotoSelected} />}
         </div>
         <div>
           <div><strong>Username: </strong>{props.profile.fullName}</div>
