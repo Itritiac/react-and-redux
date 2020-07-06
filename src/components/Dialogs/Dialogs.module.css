@@ -1,25 +1,83 @@
 .dialogs {
-    display: grid;
-    grid-template-columns: 2fr 10fr;
+    display: flex;
 }
-.dialogsItems{
-padding:  10px 0;
+
+.dialogsPage{
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 15px;
+    -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+    margin-right: 20px;
 }
-.dialogsItems  a{
-    padding: 10px;
+.dialogItems{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.dialogItems__inner {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 15px;
+    background-color: rgba(202, 194, 194, 0.267);
+    -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+
+
+.dialogItems__inner a {
     color: #000;
     text-decoration: none;
 }
 
-.dialogsItems a .active {
-    color: gold;
+.Messages{
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 15px;
+    -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    background-color: rgba(202, 194, 194, 0.267);
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.MessageForm {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.messages {
-    padding: 10px;
+.MessageForm textarea{
+    border: 0;
+    height: 60px;
+    resize: none;
+    outline: none;
+    padding: 20px;
+    font-size: 14px;
+    width: 100%;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 19px;
+    border-radius: none;
+    font-family: 'Roboto', sans-serif;
 }
 
-.messages .message {
-    color: white;
+.MessageForm button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-weight: 700;
+    color: #1890ff;
+    transition: all .2s linear;
 }
 
+.MessageForm:hover button{
+    transform: translateY(-3px);
+}

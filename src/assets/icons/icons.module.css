@@ -1,0 +1,114 @@
+.iconNavs {
+  width: 30px;
+  height: 25px;
+  padding: 0 5px;
+  fill: #002766;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.iconNavs.notification {
+  width: 26px;
+}
+
+.iconNavs.info {
+  padding-top: 4px;
+}
+
+.iconNavs:hover {
+  fill: #fff;
+}
+
+.navIcon {
+  position: absolute;
+  width: 23px;
+  top: 5px;
+  height: 31px;
+  left: 5px;
+  fill: #1890ff;
+}
+
+.navIcon__more {
+  opacity: 1;
+  position: absolute;
+  width: 23px;
+  top: 0;
+  height: 38px;
+  right: 5px;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.navUserIcon {
+  width: 19px;
+  left: 8px;
+}
+
+.addMedia {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+}
+
+.footerIcons {
+  width: 20px;
+  height: 20px;
+  fill: #595959;
+  margin-right: 7px;
+}
+
+.uploadMore {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+.settingsIcon {
+  width: 15px;
+  height: 10px;
+  cursor: pointer;
+  fill: #8c8c8c;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.settingsIcon:hover {
+  fill: #0050b3;
+}
+
+.uploadIcon {
+  height: 10px;
+  width: 4px;
+}
+
+.statsIcon {
+  width: 13px;
+  height: 13px;
+  fill: #1890ff;
+  margin-right: 5px;
+}
+
+.storiesGift {
+  width: 20px;
+  height: 20px;
+}
+
+.storiesClock {
+  width: 15px;
+  height: 17px;
+}
+
+.pageIcons {
+  width: 16px;
+  height: 15px;
+  margin-right: 5px;
+}
