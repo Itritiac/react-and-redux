@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { compose } from 'redux';
+
 import { follow, unfollow, getUsers } from './../../redux/user-reducer/user-actions';
 import { setCurrentPage, toggleFollowingProgress } from './../../redux/user-reducer/user-reducer';
 import Users from './Users';
-import Preloader from "../common/Preloader/Preloader";
-import { compose } from 'redux';
+import Preloader from '../common/Preloader/Preloader';
 import { requestUsers, getPageSize, getTotalUsersCount, getCurrentPage, getIsFetching, getFollowingInProgress } from '../../redux/user-reducer/user-selectors';
 import Navbar from '../Navbar/Navbar'
 

@@ -1,87 +1,86 @@
 .navbar {
-    grid-area: navs;
+	grid-area: navs;
 }
 
 .navbar__userName {
-    font-size: 14px;
-    margin: 20px 0;
+	font-size: 14px;
+	margin: 20px 0;
 }
 
 .navbar__user {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .navbar__userImage {
-    position: relative;
-    overflow: hidden;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+	border-radius: 50%;
 }
 
 .navbar__userImage img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    -o-object-fit: cover;
-    object-fit: cover;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 40px;
+	height: 40px;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 .user__shortcuts, .shortcuts, .explore {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-bottom: 25px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin-bottom: 25px;
 }
 
 .user__shortcutsItem, .shortcutsItem, .exploreItem {
-    font-size: 14px;
-    text-decoration: none;
-    color: #595959;
-    font-size: 14px;
-    padding: 9px 0;
-    padding-left: 40px;
-    -webkit-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
+	font-size: 14px;
+	text-decoration: none;
+	color: #595959;
+	font-size: 14px;
+	padding: 9px 0;
+	padding-left: 40px;
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
 }
 
 .user__shortcutsItem a, .shortcutsItem a, .explore-item a {
-    font-size: 14px;
-    text-decoration: none;
-    color: #595959;
-    font-size: 14px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #595959;
+	font-size: 14px;
 }
 
 .user__shortcutsItem:hover, .shortcutsItem:hover, .explore-item:hover {
-    background-color: #fff;
-    border-radius: 5px;
-    font-weight: 700;
-    color: #000;
-    cursor: pointer;
+	background-color: #fff;
+	border-radius: 5px;
+	font-weight: 700;
+	color: #000;
+	cursor: pointer;
 }
-
 
 .shortcutsTitle, .exploreTitle {
-    font-weight: 500;
-    padding-bottom: 20px;
+	font-weight: 500;
+	padding-bottom: 20px;
 }
 
-.shortcutsItemName a{
-    text-decoration: none;
+.shortcutsItemName a {
+	text-decoration: none;
 }
