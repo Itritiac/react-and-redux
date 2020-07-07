@@ -3,7 +3,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 
 import Profile from './Profile';
-import { getStatus, getUserProfile, updateStatus, savePhoto } from '../../redux/profile-reducer';
+import { getStatus, getUserProfile, updateStatus, savePhoto } from '../../redux/profile-reducer/profile-actions';
 import { withRouter } from 'react-router-dom';
 import Sidebar from '../Sidebar/Sidebar';
 import Navbar from '../Navbar/Navbar';
