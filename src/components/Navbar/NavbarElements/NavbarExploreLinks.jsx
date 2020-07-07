@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { NavPlacesIcon, NavMusicIcon, NavHomeIcon, NavGamesIcon } from '../../../assets/icons/icons';
 import styles from './../Navbar.module.css';
 

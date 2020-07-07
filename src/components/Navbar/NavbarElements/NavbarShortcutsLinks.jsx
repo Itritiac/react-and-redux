@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { NavTrophyIcon } from '../../../assets/icons/icons';
 import styles from './../Navbar.module.css';
 

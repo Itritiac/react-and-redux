@@ -1,12 +1,12 @@
 import React from 'react';
-import Profile from "./Profile";
-import { connect } from "react-redux";
-import { getStatus, getUserProfile, updateStatus, savePhoto } from "../../redux/profile-reducer";
-import { withRouter } from "react-router-dom";
 import { compose } from 'redux';
-import Sidebar from '../Sidebar/Sidebar';
+import { connect } from 'react-redux';
 
-import Navbar from '../Navbar/Navbar'
+import Profile from './Profile';
+import { getStatus, getUserProfile, updateStatus, savePhoto } from '../../redux/profile-reducer';
+import { withRouter } from 'react-router-dom';
+import Sidebar from '../Sidebar/Sidebar';
+import Navbar from '../Navbar/Navbar';
 
 class ProfileContainer extends React.Component {
 
@@ -15,7 +15,7 @@ class ProfileContainer extends React.Component {
         if (!userId) {
             userId = this.props.authorizedUserId;
             if (!userId) {
-                this.props.history.push("/login");
+                this.props.history.push('/login');
             }
         }
         this.props.getUserProfile(userId);
@@ -35,13 +35,13 @@ class ProfileContainer extends React.Component {
     render() {
         return (
             <div className="app-wrapper-contentInner">
-                <Navbar/>
+                <Navbar />
                 <Profile {...this.props}
                     isOwner={!this.props.match.params.userId}
                     profile={this.props.profile}
                     status={this.props.status}
                     updateStatus={this.props.updateStatus} />
-                    <Sidebar/>
+                <Sidebar />
             </div>
 
         )

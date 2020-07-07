@@ -1,13 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {
-  follow,
-  setCurrentPage,
-  unfollow,
-  toggleFollowingProgress,
-  getUsers
-}
-  from './../../redux/user-reducer';
+import { follow, setCurrentPage, unfollow, toggleFollowingProgress, getUsers } from './../../redux/user-reducer';
 import Users from './Users';
 import Preloader from "../common/Preloader/Preloader";
 import { compose } from 'redux';
@@ -16,27 +9,22 @@ import Navbar from '../Navbar/Navbar'
 
 class UsersContainer extends React.Component {
   componentDidMount() {
-
     const { currentPage, pageSize } = this.props;
     this.props.getUsers(currentPage, pageSize);
-
   }
 
   onPageChanged = (pageNumber) => {
-
     const { pageSize } = this.props;
     this.props.getUsers(pageNumber, pageSize);
-
-
   }
 
   render() {
     return (
       <div>
-        {this.props.isFetching ? <Preloader /> : null}  
+        {this.props.isFetching ? <Preloader /> : null}
         <div className="app-wrapper-contentInnerNav" >
           <Navbar />
-          <Users 
+          <Users
             totalUsersCount={this.props.totalUsersCount}
             pageSize={this.props.pageSize}
             currentPage={this.props.currentPage}
@@ -51,6 +39,7 @@ class UsersContainer extends React.Component {
     )
   }
 }
+
 let mapStateToProps = (state) => {
   return {
     users: requestUsers(state),

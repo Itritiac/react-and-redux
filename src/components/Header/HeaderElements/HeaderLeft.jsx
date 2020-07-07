@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './../Header.module.css'
-import { SearchIcon } from '../../../assets/icons/icons';
 import { Link } from 'react-router-dom';
 
+import styles from './../Header.module.css'
+import { SearchIcon } from '../../../assets/icons/icons';
 
 export const HeaderLeft = (props) => {
   return (

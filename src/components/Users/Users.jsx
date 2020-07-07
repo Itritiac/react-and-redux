@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
 import preloader from './../../assets/images/infinity.svg';
 import userPhoto from './../../assets/images/userPhoto.png';
 import styles from './Users.module.css';
@@ -7,9 +8,7 @@ import Paginator from '../common/Paginator/Paginator';
 
 
 const Users = (props) => {
-
   return (
-
     <div>
       <div className={styles.users}>
         {props.isFetching ? <img className={styles.preloader} src={preloader} /> : null}
@@ -35,7 +34,6 @@ const Users = (props) => {
                       : <button disabled={props.followingInProgress.some(id => id === u.id)}
                         onClick={() => { props.follow(u.id) }}>
                         Follow</button>}
-
                   </div>
                 </div>
               </div>

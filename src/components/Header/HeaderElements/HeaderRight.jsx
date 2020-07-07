@@ -1,10 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Dropdown } from 'react-bootstrap';
+
 import styles from './../Header.module.css'
 import { UsersIcon, MessageIcons, NotifcationIcons, InfoIcons } from '../../../assets/icons/icons';
-import { Dropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-
-
 
 export const HeaderRight = (props) => {
   return (
@@ -35,10 +34,10 @@ export const HeaderRight = (props) => {
         <Dropdown.Menu>
           <Dropdown.Item className={styles.dropdownItem}>
             {props.isAuth
-              ? <div>{props.login} 
-              <button onClick={props.logout}>
-                <Link to={'/'}>Log out</Link>
-              </button>
+              ? <div>{props.login}
+                <button onClick={props.logout}>
+                  <Link to={'/'}>Log out</Link>
+                </button>
               </div>
               : <Link to={'/login'}>Login</Link>}
           </Dropdown.Item>

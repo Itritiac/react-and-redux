@@ -1,12 +1,12 @@
 import React from 'react'
-import { maxLengthCreator, required } from '../../../utils/validation/validation';
 import { Field } from 'redux-form';
+
+import { maxLengthCreator, required } from '../../../utils/validation/validation';
 import { Textarea } from '../../common/FormsControls/FormsControls';
 
 const maxLength10 = maxLengthCreator(50);
 
 export const AddMessageForm = (props) => {
-    
     return (
     <form onSubmit={props.handleSubmit}>
             <div>

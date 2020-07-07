@@ -32,6 +32,7 @@ span:hover {
 }
 
 .paginatorButton {
+  width: 77px;
   padding: 10px 20px;
   border-radius: 2px;
   border: 0;

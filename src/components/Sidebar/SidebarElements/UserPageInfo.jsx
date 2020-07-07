@@ -1,4 +1,5 @@
 import React from 'react'
+
 import styles from './../Sidebar.module.css'
 import { NotifcationPage, MessagePage, UploadMore } from '../../../assets/icons/icons';
 
@@ -8,7 +9,7 @@ const UserPAgeInfo = () => {
       <div className={styles.user__top}>
         <div className={styles.user__topTitle}>Your page</div>
         <a href>
-          <UploadMore/>
+          <UploadMore />
         </a>
       </div>
       <div className={styles.user__info}>
@@ -17,11 +18,11 @@ const UserPAgeInfo = () => {
         </div>
         <div className={styles.user__infoName}>itritiac
             <div className={styles.user__infoNotifications}>
-            <MessagePage/>
+            <MessagePage />
             <div className={styles.user__infoMessages}>Messages</div>
           </div>
           <div className={styles.user__infoNotifications}>
-          <NotifcationPage/>
+            <NotifcationPage />
             <div className={styles.user__infoMessages}>Notificatios</div>
             <div className={styles.user__infoNotificationsCount}>1</div>
           </div>

@@ -1,22 +1,22 @@
-
 import React from 'react';
 
 class ProfileStatus extends React.Component {
-    
+
     state = {
         editMode: false,
         status: this.props.status
     }
 
     activateEditMode = () => {
-        this.setState( {
+        this.setState({
             editMode: true
-        } );
+        });
     }
+    
     deactivateEditMode = () => {
-        this.setState( {
+        this.setState({
             editMode: false
-        } );
+        });
         this.props.updateStatus(this.state.status);
     }
 
@@ -27,7 +27,7 @@ class ProfileStatus extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if (prevProps.status !== this.props.status){
+        if (prevProps.status !== this.props.status) {
             this.setState({
                 status: this.props.status
             })
@@ -38,7 +38,7 @@ class ProfileStatus extends React.Component {
         return (
             <div>
                 {!this.state.editMode &&
-                    <div onClick={ this.activateEditMode }>
+                    <div onClick={this.activateEditMode}>
                         <strong>Status: </strong>{this.props.status || "My status is empty"}
                     </div>
                 }
@@ -46,9 +46,9 @@ class ProfileStatus extends React.Component {
                     <div>
                         <strong>Status: </strong>
                         <input onChange={this.onStatusChange}
-                               autoFocus={true}
-                               onBlur={ this.deactivateEditMode.bind(this) }
-                               value={this.state.status}/>
+                            autoFocus={true}
+                            onBlur={this.deactivateEditMode.bind(this)}
+                            value={this.state.status} />
                     </div>
                 }
             </div>
