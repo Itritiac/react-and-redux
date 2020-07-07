@@ -26,7 +26,7 @@ const Users = (props) => {
                   <div className={styles.userName}>{u.name}</div>
                   <div className={styles.userStatus}>{u.status}</div>
                   <div className={styles.userLocation}>{"this will be indicated location"/*"u.location.country},{u.location.city"*/}</div>
-                  <div className={styles.button}>
+                  <div className={styles.buttonFollowUnfollow}>
                     {u.followed
                       ? <button disabled={props.followingInProgress
                         .some(id => id === u.id)}

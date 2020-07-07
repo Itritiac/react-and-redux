@@ -27,31 +27,31 @@ class App extends Component {
             <div>
                 <HeaderContainer />
                 <Switch>
-                    <Redirect from='/' to='/login' />
-                    
-                </Switch>
-                <div className='app-wrapper'>
+                    <Redirect exact from='/' to='/login' />
 
-                    <div className='app-wrapper-content'>
-                        <Route path='/welcome'
-                            render={() => <div>asdasd</div>} />
-                        <Route path='/dialogs'
-                            render={() => <DialogsContainer />} />
+                    <div className='app-wrapper'>
 
-                        <Route path='/home'
-                            render={() => <ProfileContainer />} />
+                        <div className='app-wrapper-content'>
+                            <Route path='/welcome'
+                                render={() => <div>asdasd</div>} />
+                            <Route path='/dialogs'
+                                render={() => <DialogsContainer />} />
 
-                        <Route path='/profile/:userId?'
-                            render={() => <ProfileContainer />} />
+                            <Route path='/home'
+                                render={() => <ProfileContainer />} />
 
-                        <Route path='/users'
-                            render={() => <UsersContainer />} />
+                            <Route path='/profile/:userId?'
+                                render={() => <ProfileContainer />} />
 
-                        <Route path='/login'
-                            render={() => <Login />} />
+                            <Route path='/users'
+                                render={() => <UsersContainer />} />
+
+                            <Route path='/login'
+                                render={() => <Login />} />
+                        </div>
+
                     </div>
-
-                </div>
+                </Switch>
             </div>
         )
     }
