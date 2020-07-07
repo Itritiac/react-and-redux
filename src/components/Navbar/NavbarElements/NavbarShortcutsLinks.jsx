@@ -9,19 +9,19 @@ export const NavbarShortcutsLinks = (props) => {
       <div className={styles.user__shortcuts}>
         <div className={styles.user__shortcutsItem}>
           <NavTrophyIcon />
-          <a href>Best Design Group</a>
+          <a title="Will be soon" href="">Best Design Group</a>
         </div>
-        <div className={styles.user__shortcutsItem}>
+        <div title="Will be soon" className={styles.user__shortcutsItem}>
           <NavTrophyIcon />
-          <a href>All About React</a>
+          <a href="">All About React</a>
         </div>
-        <div className={styles.user__shortcutsItem}>
+        <div title="Will be soon" className={styles.user__shortcutsItem}>
           <NavTrophyIcon />
-          <a href>My Shortcuts</a>
+          <a href="">My Shortcuts</a>
         </div>
-        <div className={styles.user__shortcutsItem}>
+        <div title="Will be soon" className={styles.user__shortcutsItem}>
           <NavTrophyIcon />
-          <a href>Classmate's Group</a>
+          <a title="Will be soon" href="">Classmate's Group</a>
         </div>
       </div>
     </div>

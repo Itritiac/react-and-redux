@@ -9,19 +9,19 @@ export const NavbarExploreLinks = () => {
       <div className={styles.user__shortcuts}>
         <div className={styles.user__shortcutsItem}>
           <NavPlacesIcon />
-          <a href>Interesting places</a>
+          <a title="Will be soon" href="">Interesting places</a>
         </div>
         <div className={styles.user__shortcutsItem}>
           <NavMusicIcon />
-          <a href>Music</a>
+          <a title="Will be soon" href="">Music</a>
         </div>
         <div className={styles.user__shortcutsItem}>
           <NavHomeIcon />
-          <a href>Happens Near You</a>
+          <a title="Will be soon" href="">Happens Near You</a>
         </div>
         <div className={styles.user__shortcutsItem}>
           <NavGamesIcon />
-          <a href>Games</a>
+          <a title="Will be soon" href="">Games</a>
         </div>
       </div>
     </div>
