@@ -1,6 +1,6 @@
-import { SEND_MESSAGE } from './dialogs-reducerConsts';
+import { SEND_MESSAGE } from './consts';
 
-let initialState = {
+const initialState = {
   dialogs: [
     { id: 1, name: 'Andrew' },
     { id: 2, name: 'Viktor' },
@@ -16,7 +16,7 @@ const dialogsReducer = (state = initialState, action) => {
 
   switch (action.type) {
     case SEND_MESSAGE:
-      let body = action.newMessageBody;
+      const body = action.newMessageBody;
       return {
         ...state,
         messages: [...state.messages, { id: 3, message: body }]

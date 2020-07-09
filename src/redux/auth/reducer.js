@@ -1,6 +1,6 @@
-import { SET_USER_DATA } from './auth-reducerConsts';
+import { SET_USER_DATA } from './consts';
 
-let initialState = {
+const initialState = {
   userId: null,
   email: null,
   login: null,

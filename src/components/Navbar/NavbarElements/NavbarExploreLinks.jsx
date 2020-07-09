@@ -3,7 +3,7 @@ import React from 'react';
 import { NavPlacesIcon, NavMusicIcon, NavHomeIcon, NavGamesIcon } from '../../../assets/icons/icons';
 import styles from './../Navbar.module.css';
 
-export const NavbarExploreLinks = () => {
+export function NavbarExploreLinks () {
   return (
     <div className="explore">
       <div className={styles.shortcutsTitle}>Explore</div>

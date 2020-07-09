@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.dialogsPage {
+.dialogPage {
   background-color: #fff;
   border-radius: 4px;
   padding: 15px;
@@ -34,7 +34,7 @@
   text-decoration: none;
 }
 
-.Messages {
+.messages {
   background-color: #fff;
   border-radius: 4px;
   padding: 15px;
@@ -46,13 +46,13 @@
   text-align: center;
 }
 
-.MessageForm {
+.messageForm {
   width: 200px;
   margin: 0 auto;
   text-align: center;
 }
 
-.MessageForm textarea {
+.messageForm textarea {
   border: 0;
   height: 60px;
   resize: none;
@@ -68,7 +68,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.MessageForm button {
+.messageForm button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -78,6 +78,6 @@
   transition: all .2s linear;
 }
 
-.MessageForm:hover button {
+.messageForm:hover button {
   transform: translateY(-3px);
 }

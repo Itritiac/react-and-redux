@@ -8,7 +8,7 @@ import { CreatePostAddUser, CreatePostPicture, CreatePostSmile } from './../../.
 
 const maxLength10 = maxLengthCreator(10);
 
-let AddNewPostForm = (props) => {
+function AddNewPostForm (props) {
   return (
     <div className={styles.create__post}>
       <div className={styles.create__postTop}>Create post</div>

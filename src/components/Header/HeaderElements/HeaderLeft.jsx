@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styles from './../Header.module.css'
 import { SearchIcon } from '../../../assets/icons/icons';
 
-export const HeaderLeft = (props) => {
+export function HeaderLeft () {
   return (
     <div className={styles.header__innerLeft}>
       <Link to="/home">

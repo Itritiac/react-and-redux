@@ -5,7 +5,7 @@ import Stories from './SidebarElements/Stories'
 import BirthdayAnouncer from './SidebarElements/BirthdayAnouncer'
 import UserPAgeInfo from './SidebarElements/UserPageInfo'
 
-const Sidebar = () => {
+function Sidebar () {
   return (
     <div className={styles.sidebar}>
       <Stories />

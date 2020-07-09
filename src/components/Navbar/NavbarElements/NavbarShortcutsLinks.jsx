@@ -3,7 +3,7 @@ import React from 'react';
 import { NavTrophyIcon } from '../../../assets/icons/icons';
 import styles from './../Navbar.module.css';
 
-export const NavbarShortcutsLinks = (props) => {
+export function NavbarShortcutsLinks () {
   return (
     <div className={styles.shortcuts}>
       <div className={styles.shortcutsTitle}>Shortcuts</div>

@@ -2,19 +2,19 @@ import * as axios from 'axios';
 
 const instance = axios.create({
   withCredentials: true,
-  baseURL : 'https://social-network.samuraijs.com/api/1.0/',
+  baseURL: 'https://social-network.samuraijs.com/api/1.0/',
   headers: {
-    "API-KEY" : "77ab2db8-601f-459a-b48d-78248b31ac9d"
+    "API-KEY": "77ab2db8-601f-459a-b48d-78248b31ac9d"
   }
 })
 
 export const userAPI = {
-  getUsers(currentPage = 1, pageSize = 6){
+  getUsers(currentPage = 1, pageSize = 6) {
 
-    return(
-      instance.get(`users?page=${currentPage}&count=${pageSize}`,{
-            withCredentials: true,
-        })
+    return (
+      instance.get(`users?page=${currentPage}&count=${pageSize}`, {
+        withCredentials: true,
+      })
         .then(response => {
           return response.data;
         })
@@ -29,40 +29,40 @@ export const userAPI = {
   },
   getProfile(userId) {
     return profileAPI.getProfile(userId);
-}
+  }
 }
 
 export const profileAPI = {
   getProfile(userId) {
-    return instance.get(`profile/` + userId);
-},
-getStatus(userId) {
-    return instance.get(`profile/status/` + userId);
-},
-updateStatus(status) {
+    return instance.get(`profile/${userId}`);
+  },
+  getStatus(userId) {
+    return instance.get(`profile/status/${userId}`);
+  },
+  updateStatus(status) {
     return instance.put(`profile/status`, { status: status });
-},
-savePhoto(photoFile) {
+  },
+  savePhoto(photoFile) {
     const formData = new FormData();
     formData.append("image", photoFile);
 
     return instance.put(`profile/photo`, formData, {
-        headers: {
-            'Content-Type': 'multipart/form-data'
-        }
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
     });
-}
+  }
 }
 
 export const authAPI = {
   me() {
-      return instance.get(`auth/me`)
+    return instance.get(`auth/me`)
   },
   login(email, password, rememberMe = false) {
-      return instance.post(`auth/login`, { email, password, rememberMe });
+    return instance.post(`auth/login`, { email, password, rememberMe });
   },
   logout() {
-      return instance.delete(`auth/login`);
+    return instance.delete(`auth/login`);
   }
 }
 

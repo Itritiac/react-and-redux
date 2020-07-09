@@ -1,6 +1,6 @@
-import { INITIALIZED_SUCCESS } from './app-reducerConsts';
+import { INITIALIZED_SUCCESS } from './consts';
 
-let initialState = {
+const initialState = {
   initialized: false
 };
 

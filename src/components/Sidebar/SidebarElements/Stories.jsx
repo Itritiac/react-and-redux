@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './../Sidebar.module.css'
 import { ClockIcon, UploadPoint } from '../../../assets/icons/icons';
 
-const Stories = () => {
+function Stories () {
   return (
     <div className={styles.stories}>
       <div className={styles.stories__top}>

@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './../Sidebar.module.css'
 import { GiftIcon } from '../../../assets/icons/icons';
 
-const BirthdayAnouncer = () => {
+function BirthdayAnouncer () {
   return (
     <div className={styles.stories}>
       <div className={styles.stories__news}>

@@ -3,7 +3,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 
 import Profile from './Profile';
-import { getStatus, getUserProfile, updateStatus, savePhoto } from '../../redux/profile-reducer/profile-actions';
+import { getStatus, getUserProfile, updateStatus, savePhoto } from '../../redux/profile/actions';
 import { withRouter } from 'react-router-dom';
 import Sidebar from '../Sidebar/Sidebar';
 import Navbar from '../Navbar/Navbar';
@@ -48,7 +48,7 @@ class ProfileContainer extends React.Component {
   }
 }
 
-let mapStateToProps = (state) => ({
+const mapStateToProps = (state) => ({
   profile: state.profilePage.profile,
   status: state.profilePage.status,
   authorizedUserId: state.auth.userId,

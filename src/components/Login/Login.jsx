@@ -4,12 +4,12 @@ import { reduxForm, Field } from 'redux-form';
 import { Input } from '../common/FormsControls/FormsControls';
 import { required } from '../../utils/validation/validation';
 import { connect } from 'react-redux';
-import { login } from './../../redux/auth-reducer/auth-actions'
+import { login } from '../../redux/auth/actions'
 import { Redirect } from 'react-router-dom';
 import styles from './../common/FormsControls/FormControls.module.css'
 import style from './login.module.css'
 
-const LoginForm = ({ handleSubmit, error }) => {
+function LoginForm ({ handleSubmit, error }) {
   return (
     <form className={style.LoginForm} onSubmit={handleSubmit}>
       <h3>Welcome</h3>
@@ -38,7 +38,7 @@ const LoginForm = ({ handleSubmit, error }) => {
 
 const LoginReduxForm = reduxForm({ form: 'login' })(LoginForm);
 
-const Login = (props) => {
+function Login  (props) {
   const onSubmit = (formData) => {
     props.login(formData.email, formData.password, formData.rememberMe);
   }

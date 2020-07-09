@@ -6,10 +6,10 @@ import { CreatePost } from './Posts/CreatePosts';
 
 class MyPosts extends React.PureComponent {
   render() {
-    let postsElements =
+    const postsElements =
       [...this.props.posts].reverse().map(p => <UploadedPosts message={p.message} name={p.name} likesCount={p.likesCount} />);
 
-    let onAddPost = (values) => {
+    const onAddPost = (values) => {
       this.props.addPost(values.newPostText);
     }
 

@@ -1,6 +1,6 @@
-import { ADD_POST, SET_USER_PROFILE, SET_STATUS, SAVE_PHOTO_SUCCESS } from './profile-reducerConsts';
+import { ADD_POST, SET_USER_PROFILE, SET_STATUS, SAVE_PHOTO_SUCCESS } from './consts';
 
-let initialState = {
+const initialState = {
   posts: [
     { id: 1, name: 'Viktor', message: 'Hi, how are you?', likesCount: 12 },
     { id: 2, name: 'Andrew', message: 'It\'s my first post', likesCount: 31 },
@@ -15,7 +15,7 @@ const profileReducer = (state = initialState, action) => {
 
   switch (action.type) {
     case ADD_POST:
-      let newPost = {
+      const newPost = {
         id: 5,
         message: action.newPostText,
         likesCount: 0,

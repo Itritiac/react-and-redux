@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './../Sidebar.module.css'
 import { NotifcationPage, MessagePage, UploadMore } from '../../../assets/icons/icons';
 
-const UserPAgeInfo = () => {
+function UserPAgeInfo () {
   return (
     <div className={styles.stories}>
       <div className={styles.user__top}>

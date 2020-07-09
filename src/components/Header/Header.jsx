@@ -4,7 +4,7 @@ import styles from './Header.module.css';
 import { HeaderLeft } from './HeaderElements/HeaderLeft';
 import { HeaderRight } from './HeaderElements/HeaderRight';
 
-const Header = (props) => {
+function Header (props) {
   return (
     <header className={styles.header}>
       <div className={styles.container}>

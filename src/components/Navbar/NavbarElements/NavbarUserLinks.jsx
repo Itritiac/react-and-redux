@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { NavMessageIcon, NavProfileIcon, NavUsersIcon } from '../../../assets/icons/icons';
 import styles from './../Navbar.module.css';
 
-export const NavbarUserLinks = () => {
+export function NavbarUserLinks () {
   return (
     <div>
       <div className={styles.navbar__user}>

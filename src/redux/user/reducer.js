@@ -1,7 +1,7 @@
 import { updateObjectInArray } from '../../utils/object-helpers';
-import { FOLLOW, UNFOLLOW, SET_USERS, SET_CURRENT_PAGE, SET_TOTAL_USERS_COUNT, TOGGLE_IS_FETCHING, TOGGLE_IS_FOLLOWING_PROGRESS } from './user-reducerConsts';
+import { FOLLOW, UNFOLLOW, SET_USERS, SET_CURRENT_PAGE, SET_TOTAL_USERS_COUNT, TOGGLE_IS_FETCHING, TOGGLE_IS_FOLLOWING_PROGRESS } from './consts';
 
-let initialState = {
+const initialState = {
   users: [],
   pageSize: 6,
   totalUsersCount: 0,

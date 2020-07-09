@@ -5,10 +5,10 @@ import { NavbarUserLinks } from './NavbarElements/NavbarUserLinks';
 import { NavbarShortcutsLinks } from './NavbarElements/NavbarShortcutsLinks'
 import { NavbarExploreLinks } from './NavbarElements/NavbarExploreLinks'
 
-const Navbar = (props) => {
+function Navbar (props) {
   return (
     <nav className={styles.navbar}>
-      <NavbarUserLinks {...props} />
+      <NavbarUserLinks />
       <NavbarShortcutsLinks />
       <NavbarExploreLinks />
     </nav>

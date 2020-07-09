@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { compose } from 'redux';
-import { initializeApp } from './redux/app-reducer/app-actions';
 
+import { initializeApp } from './redux/app/actions';
 import Preloader from './components/common/Preloader/Preloader';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
@@ -58,5 +58,6 @@ const mapStateToProps = (state) => ({
 })
 export default compose(
   withRouter,
-  connect(mapStateToProps, { initializeApp }))(App);
+  connect(mapStateToProps, { initializeApp })
+)(App);
   

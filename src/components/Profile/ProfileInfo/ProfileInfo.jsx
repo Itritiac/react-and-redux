@@ -7,7 +7,7 @@ import ProfileStatusWithHooks from './ProfileStatusHooks';
 import { UploadIcon } from '../../../assets/icons/icons';
 import cover from './../../../assets/images/cover.jpg'
 
-const ProfileInfo = (props) => {
+function ProfileInfo (props) {
   if (!props.profile) {
     return (
       <div>
@@ -16,7 +16,7 @@ const ProfileInfo = (props) => {
     )
   }
 
-  const onMainPhotoSelected = (e) => {
+  function onMainPhotoSelected (e) {
     if (e.target.files.length) {
       props.savePhoto(e.target.files[0]);
     }

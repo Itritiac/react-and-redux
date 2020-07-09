@@ -4,7 +4,7 @@ import styles from './Post.module.css';
 import { UploadPoint, UploadSettings, UploadMore, LikeStats, LikeFooter, ShareFooter, CommentFooter } from '../../../../assets/icons/icons';
 import userPhoto from './../../../../assets/images/userPhoto.png'
 
-const UploadedPosts = (props) => {
+function UploadedPosts (props) {
   return (
     <div className={styles.uploaded__post}>
       <div className={styles.uploaded__postTop}>

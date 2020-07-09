@@ -1,4 +1,4 @@
-export const required = value => {
+export const required = (value) => {
   if (value) return undefined;
 
   return "Your minds are very important to us";

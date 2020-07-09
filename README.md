@@ -4,12 +4,19 @@ This is my first project on React created for learning this library
 
 ## Project Status
 
-This project is currently in development. Users can Login in app (if they have acount), add posts, upload avatar, see other users, and other functions.  
+This project is currently in development. Users can Login in app (if they have account), add posts, upload avatar, see other users, and other functions.  
 
 
 ## Installation and Setup Instructions
 
-Clone down this repository. You will need `node` and `npm` installed globally on your machine.
+### `git clone "name of repository" `
+
+Clone down this repository. 
+
+### `npm --version ` 
+### `node --version `
+
+You will need `node` and `npm` installed globally on your machine. You need to have minimum 6.13.4 for npm and 12.16.1 for none
 
 ### `npm install`
 

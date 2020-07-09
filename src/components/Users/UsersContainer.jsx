@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import { follow, unfollow, getUsers } from './../../redux/user-reducer/user-actions';
-import { setCurrentPage, toggleFollowingProgress } from './../../redux/user-reducer/user-reducer';
+import { follow, unfollow, getUsers } from '../../redux/user/actions';
+import { setCurrentPage, toggleFollowingProgress } from '../../redux/user/reducer';
 import Users from './Users';
 import Preloader from '../common/Preloader/Preloader';
-import { requestUsers, getPageSize, getTotalUsersCount, getCurrentPage, getIsFetching, getFollowingInProgress } from '../../redux/user-reducer/user-selectors';
+import { requestUsers, getPageSize, getTotalUsersCount, getCurrentPage, getIsFetching, getFollowingInProgress } from '../../redux/user/selectors';
 import Navbar from '../Navbar/Navbar'
 
 class UsersContainer extends React.Component {
@@ -42,7 +42,7 @@ class UsersContainer extends React.Component {
   }
 }
 
-let mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     users: requestUsers(state),
     pageSize: getPageSize(state),

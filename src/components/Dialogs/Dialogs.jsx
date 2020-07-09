@@ -8,31 +8,32 @@ import Sidebar from '../Sidebar/Sidebar';
 import Navbar from '../Navbar/Navbar'
 import styles from './Dialogs.module.css';
 
-const Dialogs = (props) => {
+function Dialogs (props) {
+  const {dialogPage, sendMessage} = props;
 
-  let state = props.dialogsPage;
-  let dialogsElements = state.dialogs.map(d => <DialogItem name={d.name} key={d.id} id={d.id} />);
-  let messagesElements = state.messages.map(m => <Message message={m.message} key={m.id} />);
+  const state = dialogPage;
+  const dialogElements = state.dialogs.map(d => <DialogItem name={d.name} key={d.id} id={d.id} />);
+  const messageElements = state.messages.map(m => <Message message={m.message} key={m.id} />);
 
-  let addNewMessage = (values) => {
-    props.sendMessage(values.newMessageBody);
+  const handleSubmit = (values) => {
+    sendMessage(values.newMessageBody);
   }
 
   return (
     <div className="app-wrapper-contentInner">
       <Navbar />
       <div>
-        <div className={styles.dialogsPage}>
+        <div className={styles.dialogPage}>
           <div >
             <div className={styles.dialogItems}>
-              {dialogsElements}
+              {dialogElements}
             </div>
-            <div className={styles.Messages}>
-              <div>{messagesElements}</div>
+            <div className={styles.messages}>
+              <div>{messageElements}</div>
             </div>
           </div>
-          <div className={styles.MessageForm}>
-            <AddMessageFormRedux onSubmit={addNewMessage} />
+          <div className={styles.messageForm}>
+            <AddMessageFormRedux onSubmit={handleSubmit} />
           </div>
         </div>
       </div>

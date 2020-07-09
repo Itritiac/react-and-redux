@@ -7,7 +7,9 @@ import styles from './Users.module.css';
 import Paginator from '../common/Paginator/Paginator';
 
 
-const Users = (props) => {
+function Users(props) {
+  const { follow, unfollow, followingInProgress, currentPage, totalUsersCount, pageSize, onPageChanged } = props;
+
   return (
     <div>
       <div className={styles.users}>
@@ -27,12 +29,12 @@ const Users = (props) => {
                   <div className={styles.userLocation}>{"this will be indicated location"/*"u.location.country},{u.location.city"*/}</div>
                   <div className={styles.buttonFollowUnfollow}>
                     {u.followed
-                      ? <button disabled={props.followingInProgress
+                      ? <button disabled={followingInProgress
                         .some(id => id === u.id)}
-                        onClick={() => { props.unfollow(u.id) }}>
+                        onClick={() => { unfollow(u.id) }}>
                         Unfollow</button>
-                      : <button disabled={props.followingInProgress.some(id => id === u.id)}
-                        onClick={() => { props.follow(u.id) }}>
+                      : <button disabled={followingInProgress.some(id => id === u.id)}
+                        onClick={() => { follow(u.id) }}>
                         Follow</button>}
                   </div>
                 </div>
@@ -40,10 +42,10 @@ const Users = (props) => {
             </div>)
         }
       </div>
-      <Paginator currentPage={props.currentPage}
-        totalItemsCount={props.totalUsersCount}
-        pageSize={props.pageSize}
-        onPageChanged={props.onPageChanged} />
+      <Paginator currentPage={currentPage}
+        totalItemsCount={totalUsersCount}
+        pageSize={pageSize}
+        onPageChanged={onPageChanged} />
     </div>
   )
 }
