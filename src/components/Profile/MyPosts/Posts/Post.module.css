@@ -34,10 +34,10 @@
   height: 60px;
   resize: none;
   outline: none;
-  padding: 20px;
+  padding: 19px;
   font-size: 14px;
   width: 450px;
-  border-radius: 20px;;
+  border-radius: 5px;
 }
 
 .create__postForm{
