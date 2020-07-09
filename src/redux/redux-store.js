@@ -11,13 +11,13 @@ import appReducer from "./app-reducer/app-reducer";
 
 
 let reducers = combineReducers({
-	profilePage: profileReducer,
-	dialogsPage: dialogsReducer,
-	sidebar: sidebarReducer,
-	usersPage: usersReducer,
-	auth: authReducer,
-	form: formReducer,
-	app: appReducer
+  profilePage: profileReducer,
+  dialogsPage: dialogsReducer,
+  sidebar: sidebarReducer,
+  usersPage: usersReducer,
+  auth: authReducer,
+  form: formReducer,
+  app: appReducer
 });
 
 

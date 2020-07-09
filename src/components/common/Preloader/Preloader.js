@@ -11,4 +11,5 @@ let Preloader = (props) => {
   )
 }
 
-export default Preloader; 
+export default Preloader;
+ 

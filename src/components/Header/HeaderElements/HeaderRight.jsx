@@ -44,6 +44,5 @@ export const HeaderRight = (props) => {
         </Dropdown.Menu>
       </Dropdown>
     </div>
-
   )
 }
